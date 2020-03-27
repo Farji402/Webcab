@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fd02d43d-f3cb-4204-a0fb-87385c68d732" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/home/images/background2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/staticfiles/images/background2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/home/images/hitesh-choudhary-9RsblMBANXo-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/staticfiles/images/hitesh-choudhary-9RsblMBANXo-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/home/images/lexi-ruskell-G8wPrJyNqWQ-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/staticfiles/images/lexi-ruskell-G8wPrJyNqWQ-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/home/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/staticfiles/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/home/images/logo1.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/staticfiles/images/logo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/home/images/thanuj-mathew-QFzcGqfUceU-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/staticfiles/images/thanuj-mathew-QFzcGqfUceU-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/home/about_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/about_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/home/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/home_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup/static/signup/images/signupbg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/staticfiles/images/signupbg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup/templates/signup/signup_page_final.html" beforeDir="false" afterPath="$PROJECT_DIR$/signup/templates/signup/signup_page_final.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webcab/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/webcab/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webcab_heruko" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="ProjectId" id="1ZRqkaVpBriJNMADqtxdY6dswPR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates/home" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Aman\Desktop\webcab\home\templates\home" />
+      <recent name="C:\Users\Aman\Desktop\webcab\signup\static\signup\images" />
+      <recent name="C:\Users\Aman\Desktop\webcab\home\static\home\images" />
+      <recent name="C:\Users\Aman\Desktop\webcab\signup\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Aman\Desktop\webcab\static" />
+      <recent name="C:\Users\Aman\Desktop\webcab\staticfiles\images" />
+      <recent name="C:\Users\Aman\Desktop\webcab\signup\templates\signup" />
+      <recent name="C:\Users\Aman\Desktop\webcab\signup\templates\signup\signup_complete" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="showServicesTree" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd02d43d-f3cb-4204-a0fb-87385c68d732" name="Default Changelist" comment="" />
+      <created>1584812397841</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584812397841</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="233" y="19" key="#Notifications" timestamp="1585147582856">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="233" y="19" key="#Notifications/0.0.1280.720@0.0.1280.720" timestamp="1585147582856" />
+    <state x="96" y="16" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584871660901">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="96" y="16" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.720@0.0.1280.720" timestamp="1584871660901" />
+    <state x="463" y="277" key="Github.CreateGistDialog" timestamp="1585147481246">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="463" y="277" key="Github.CreateGistDialog/0.0.1280.720@0.0.1280.720" timestamp="1585147481246" />
+    <state x="142" y="3" key="SettingsEditor" timestamp="1584871292191">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="142" y="3" key="SettingsEditor/0.0.1280.720@0.0.1280.720" timestamp="1584871292191" />
+    <state x="337" y="185" key="com.intellij.ide.util.TipDialog" timestamp="1585311254677">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="337" y="185" key="com.intellij.ide.util.TipDialog/0.0.1280.720@0.0.1280.720" timestamp="1585311254677" />
+    <state x="450" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585239208576">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="450" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.720@0.0.1280.720" timestamp="1585239208576" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1585216448959">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1585216448959" />
+  </component>
+</project>

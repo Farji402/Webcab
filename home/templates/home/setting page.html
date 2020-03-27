@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>setting page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script>
+
+<!-- script for form validation -->
+
+
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+
+
+</script>
+
+
+
+  <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Cuprum|Noto+Sans+SC|Varela+Round&display=swap" rel="stylesheet">
+
+   <!-- google icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+    <!-- google icon styling -->
+        .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+        .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+        .material-icons.md-light { color: rgba(255, 255, 255, 1); }
+        .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+        .material-icons.md-18 { font-size: 18px; }
+        .material-icons.md-24 { font-size: 24px; }
+        .material-icons.md-36 { font-size: 36px; }
+        .material-icons.md-48 { font-size: 48px; }
+
+    <!-- something with the carousel -->
+
+
+
+  </style>
+
+</head>
+<body style="font-family: 'Acne', sans-serif; font-size: 20px;">
+
+    <!-- navbar starting -->
+
+    <nav class="navbar navbar-expand-md shadow bg-dark navbar-dark fixed-top ">
+      <a class="navbar-brand text-warning" href="{% url 'home:booking' %}" style="font-family:'Indie flower'; font-size:30px;"><strong>WEBCAB</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link text-warning active" href="{% url 'home:booking' %}">
+                    <button type="button" class="btn btn-warning">Book Cab</button>
+                </a>
+            </li>
+
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle text-warning" href="#" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="{% url 'home:profile' %}">Profile</a>
+                    <a class="dropdown-item active" href="#">Setting</a>
+                    <a class="dropdown-item" href="{% url 'home:logout' %}">LogOut</a>
+                </div>
+            </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+    <!-- navbar end -->
+
+    <!- vertical navbar -->
+    <div class="container row mt-5 ml-3">
+        <ul class="nav flex-sm-column nav-tabs mt-5 ">
+            <li class="nav-item">
+                <h5 class="display-5 mt-5">
+                    <a class="nav-link text-warning" data-toggle="tab" href="#general_settings">General</a>
+                </h5>
+            </li>
+            <li class="nav-item">
+                <h5 class="display-5 mt-5">
+                    <a class="nav-link text-warning" data-toggle="tab" href="#security_settings">Security</a>
+                </h5>
+            </li>
+        </ul>
+
+        <div class="tab-content col-md-6 mt-5">
+            <div class="tab-pane container" id="general_settings">
+                <form action="{% url 'home:edit_general' %}" method="post" class="needs-validation" novalidate>
+                    {% csrf_token %}
+                    <div class="form-group p-2">
+                        <label for="username">Username:</label>
+                        <input type="text" class="form-control" id="username" name="username" value="{{ username }}" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out these field.</div>
+                    </div>
+                    <div class="form-group p-2">
+                        <label for="phone">Phone Number:</label>
+                        <input type="text" class="form-control" id="phone" name="phone" value="{{ mobile }}" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out these field.</div>
+                    </div>
+                    <button type="submit" class="btn btn-warning btn-sm">Save</button>
+                </form>
+            </div>
+
+            <div class="tab-pane container fade" id="security_settings">
+                <form action="{% url 'home:edit_security' %}" method="post" class="needs-validation" novalidate oninput='password2.setCustomValidity(password2.value != password.value ? "Passwords do not match." : "")'>
+                    {% csrf_token %}
+                    <div class="form-group p-2">
+                        <input type="password" class="form-control" id="current_password" name="current_password" placeholder="Current password" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out these field.</div>
+                    </div>
+                    <div class="form-group p-2">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="New password" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out these field.</div>
+                    </div>
+                    <div class="form-group p-2">
+                        <input type="password" class="form-control" id="password2" placeholder="Renter new password" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Password doesn't match!</div>
+                    </div>
+                    <button type="submit" class="btn btn-warning bt-sm">Save</button>
+                </form>
+            </div>
+            <p class="text-danger">{{ form_response }}</p>
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+</html>

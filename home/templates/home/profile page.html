@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script>
+
+<!-- script for form validation -->
+
+
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+
+
+</script>
+
+
+
+  <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+
+   <!-- google icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+    <!-- google icon styling -->
+        .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+        .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+        .material-icons.md-light { color: rgba(255, 255, 255, 1); }
+        .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+        .material-icons.md-18 { font-size: 18px; }
+        .material-icons.md-24 { font-size: 24px; }
+        .material-icons.md-36 { font-size: 36px; }
+        .material-icons.md-48 { font-size: 48px; }
+
+    <!-- something with the carousel -->
+
+
+
+  </style>
+
+</head>
+
+<body style="font-family: 'Acne', sans-serif; font-size: 20px;">
+
+    <!-- navbar starting -->
+
+    <nav class="navbar navbar-expand-md shadow bg-dark navbar-dark fixed-top ">
+      <a class="navbar-brand text-warning" href="{% url 'home:booking' %}" style="font-family:'Indie flower'; font-size:30px;"><strong>WEBCAB</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link text-warning active" href="{% url 'home:booking' %}">
+                    <button type="button" class="btn btn-warning">Book Cab</button>
+                </a>
+            </li>
+
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle text-warning" href="#" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item active" href="#">Profile</a>
+                    <a class="dropdown-item" href="{% url 'home:setting' %}">Setting</a>
+                    <a class="dropdown-item" href="{% url 'home:logout' %}">LogOut</a>
+                </div>
+            </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+    <!-- navbar end -->
+
+    <!-- profile picture model -->
+
+    <div class="modal fade" id="profile_photo">
+        <div class="modal-dialog model-dialog-centered">
+            <div class="modal-content bg-white">
+
+                <div class="modal-header">
+                    <h5 class="display-5">Upload your profile photo</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="model-body">
+                    <form action="{% url 'home:upload_dp' %}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="dp">Profile picture:</label>
+                            <input type="file" class="form-control" id="dp" name="dp"><br>
+                            <small class="form-text text-muted">Upload file only in image formats(png , jpg etc)</small>
+                        </div>
+                        <p class="text-danger">{{ response }}</p>
+                        <button type="submit" class="btn btn-warning">Upload</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- profile picture model -->
+
+
+
+    <!-- profile page content -->
+
+    <div class="row mt-5">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 mt-5 pr-5 text-center">
+            <img src="{{ dbuser.dp.url }}" class="rounded-circle img-responsive" alt="profile picture" style="height:200px;width:200px;" data-target="#profile_photo" data-toggle="modal"><br><br>
+            <h3 class=" ml-3 ">{{ username|title }}</h3>
+        </div>
+    </div>
+        <div class="row pt-3">
+            <div class="col-md">
+                <div class="container" style="font-family: 'Varela Round', sans-serif;">
+                    <ul class="nav nav-tabs justify-content-center" style="font-size:40px;">
+                        <li class="nav-item mx-5">
+                            <a class="nav-link text-warning" data-toggle="tab" href="#trips">Trips</a>
+                        </li>
+                        <li class="nav-item mx-5">
+                            <a class="nav-link text-warning" data-toggle="tab" href="#groups">Groups</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="trips" class="container tab-pane active"><br>
+                            <h3>All past trips...</h3><br>
+                            <ul class="pagination justify-content-center text-warning" style="margin:20px 0;">
+                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Next  </a></li>
+                            </ul>
+                        </div>
+                        <div id="groups" class="container tab-pane fade"><br>
+                            <h3>All the groups you are part of...</h3><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+</body>
+</html>

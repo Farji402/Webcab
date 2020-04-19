@@ -4,6 +4,7 @@ cab sharing web application
 
 
 # Navigation through the WebCab website
+Note: If you're using online website then start from step 7.
 
 STEPS:
 

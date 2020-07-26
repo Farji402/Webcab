@@ -24,4 +24,4 @@ STEPS:
 
 # Important notes:
 One session can run for at most 2 hours.
-
+The website is not responsive for smaller screens( cell phones, tablets etc). Open only in PC and laptop
